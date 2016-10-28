@@ -10,7 +10,7 @@ WORKDIR /usr/local/tomcat/webapps/
 RUN wget http://ares.boundlessgeo.com/geofence/master/geofence-master-latest-war.zip \
 	&& unzip geofence-master-latest-war.zip \
 	&& rm geofence-master-latest-war.zip \
-  && unzip -d geofence geofence.war \
+  && unzip -d geofence gui/web/target/geofence.war \
   && rm geofence/WEB-INF/lib/persistence-api-1.0.jar # They currently package incompatible API jars
 
 # Install Geofence extension in GeoServer
