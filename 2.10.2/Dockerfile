@@ -1,17 +1,16 @@
-FROM oscarfonts/geoserver:2.9.2
+FROM oscarfonts/geoserver:2.10.2
 
 MAINTAINER Víctor González <victor.gonzalez@geomati.co>
 
-ENV MAJOR_VERSION 2.9
+ENV MAJOR_VERSION 2.10
 
 WORKDIR /usr/local/tomcat/webapps/
 
 # Install Geofence webapp
-RUN wget http://ares.boundlessgeo.com/geofence/master/geofence-master-latest-war.zip \
-	&& unzip geofence-master-latest-war.zip \
-	&& rm geofence-master-latest-war.zip \
-  && unzip -d geofence gui/web/target/geofence.war \
-  && rm geofence/WEB-INF/lib/persistence-api-1.0.jar # They currently package incompatible API jars
+RUN wget http://ares.boundlessgeo.com/geofence/3.2.x/release-v3.2.2-geofence-war.zip \
+	&& unzip release-v3.2.2-geofence-war.zip \
+	&& rm release-v3.2.2-geofence-war.zip \
+    && unzip -d geofence geofence.war
 
 # Install Geofence extension in GeoServer
 RUN wget http://ares.boundlessgeo.com/geoserver/${MAJOR_VERSION}.x/community-latest/geoserver-${MAJOR_VERSION}-SNAPSHOT-geofence-plugin.zip \
