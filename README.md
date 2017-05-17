@@ -13,7 +13,7 @@ Dockerized GeoServer+GeoFence (not embedded; separate instance).
 
 Active versions with [automated builds](https://hub.docker.com/r/geomatico/geoserver-geofence) available on [docker registry](https://registry.hub.docker.com/):
 
-* [`latest`, `2.11.x`, `2.11.2` (*2.11.2/Dockerfile*)](https://github.com/geomatico/docker-geoserver-geofence/blob/master/2.11.0/Dockerfile)
+* [`latest`, `2.11.x`, `2.11.0` (*2.11.0/Dockerfile*)](https://github.com/geomatico/docker-geoserver-geofence/blob/master/2.11.0/Dockerfile)
 * [`maintenance`, `2.10.x`, `2.10.2` (*2.10.2/Dockerfile*)](https://github.com/geomatico/docker-geoserver-geofence/blob/master/2.10.2/Dockerfile)
 
 
